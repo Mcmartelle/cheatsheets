@@ -1,0 +1,108 @@
+// A KDL node is a node name, followed by zero or more "arguments", and children. 
+title "Hello, World"
+
+// You can also have multiple values in a single node!
+bookmarks 12 15 188 1234
+
+// Nodes can have properties.
+author "Alex Monad" email="alex@example.com" active=true
+
+// And they can have nested child nodes, too!
+contents {
+  section "First section" {
+    paragraph "This is the first paragraph"
+    paragraph "This is the second paragraph"
+  }
+}
+
+//Nodes without children are terminated by a newline, a semicolon, or the end of a file stream:
+node1; node2; node3;
+
+// KDL supports 4 data types:
+Strings "hello world"
+Numbers 123.45
+Booleans true false
+Null null
+
+// Two different string formats
+escaped "this\nhas\tescapes"
+raw r"C:\Users\zkat\"
+
+// You can add any number of # around raw strings to disambiguate literal " characters
+pound-raw r#"hello"world"#
+more-pound-raw r###"hello"world"###
+
+// Both string formats can be multiline
+multiline "my
+multiline
+string"
+
+// 4 Ways to represent numbers
+// 1/4 decimal-radix number with optional decimal and optional exponent
+decimal-number 1.234e-42
+
+// 2/4 hexadecimal, 0x prefix
+hexadecimal-number 0xdeadbeef
+
+// 3/4 octal, 0o prefix
+octal-number 0o755
+
+// 4/4 binary, 0b prefix
+binary-number 0b10101101
+
+// Numbers can have underscores to improve readability
+confusion-number 1000000000
+readable-number 1_000_000_000
+
+// Comments
+// C style
+
+/*
+C style multiline
+*/
+
+tag /*foo=true*/ bar=false
+
+/*/*
+hello
+*/*/
+
+// Slashdash comments, which can be used to comment out individual nodes, arguments, or children:
+// This entire node and its children are all commented out.
+/-mynode "foo" key=1 {
+  a
+  b
+  c
+}
+
+mynode /-"commented" "not commented" /-key="value" /-{
+  a
+  b
+}
+
+// KDL supports type annotations on both values and nodes. These can be arbitrary, but can be used by individual implementations or use-cases to constrain KDL's basic types. A number of type names are also reserved to have specific meanings.
+numbers (u8)10 (i32)20 myfloat=(f32)1.5 {
+  strings (uuid)"123e4567-e89b-12d3-a456-426614174000" (date)"2021-02-03" filter=(regex)r"$\d+"
+  (author)person name="Alex"
+}
+
+// Nodes can be separated into multiple lines
+title \
+  "Some title"
+
+// Files must be utf8 encoded!
+smile "😁"
+
+// Instead of anonymous nodes, nodes and properties can be wrapped
+// in "" for arbitrary node names.
+"!@#$@$%Q#$%~@!40" "1.2.3" "!!!!!"=true
+
+// The following is a legal bare identifier:
+foo123~!@#$%^&*.:'|?+ "weeee"
+
+// And you can also use unicode!
+ノード　お名前="☜(ﾟヮﾟ☜)"
+
+// kdl specifically allows properties and values to be
+// interspersed with each other, much like CLI commands.
+foo bar=true "baz" quux=false 1 2 3
