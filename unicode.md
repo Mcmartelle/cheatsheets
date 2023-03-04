@@ -41,6 +41,16 @@ example, `Ctrl-K` + `C` + `o` generates the copyright symbol &copy;.  See
 * [Vim Digraphs](#vim)
 * [Unassigned Digraphs](#unassigned-digraphs)
 
+### Dice
+“⛶” (U+26F6)
+“⚬” (U+26AC)
+“⚀” (U+2680)
+“⚁” (U+2681)
+“⚂” (U+2682)
+“⚃” (U+2683)
+“⚄” (U+2684)
+“⚅” (U+2685)
+
 Actual                             | Description                                                                                                  | Vim        | HTML          | Hex    | Dec    | UTF-8       | UTF-16            | Category
 ---------------------------------- | ------------------------------------------------------------------------------------------------------------ | ---------- | ------------- | ------ | ------ | ----------- | ----------------- | ---
 <a id="latin-1">*Section*</a>      | [**Latin-1 Supplement**](https://en.wikipedia.org/wiki/Latin-1_Supplement_(Unicode_block))                   |            |               |        |        |             |                   |
