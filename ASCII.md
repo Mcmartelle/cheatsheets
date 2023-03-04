@@ -12,12 +12,7 @@ intro: |
 ---
 
 
-ASCII Code Table {.cols-1}
----------------
-
-
-
-### ASCII Code Table
+# ASCII Code Table
 
 
 | Symbol                             | Dec  | Oct  | Hex  | Bin      |
@@ -278,4 +273,3 @@ ASCII Code Table {.cols-1}
 | ý                                  | 253  | 375  | FD   | 11111101 |
 | þ                                  | 254  | 376  | FE   | 11111110 |
 | ÿ                                  | 255  | 377  | FF   | 11111111 |
-{.show-header}

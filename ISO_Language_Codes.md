@@ -13,7 +13,7 @@ intro: |
 
 # ISO 639-1 Language Code
 
-Getting Started {.cols-2}
+Getting Started
 ---------------
 
 ### Introduction
@@ -23,7 +23,6 @@ Getting Started {.cols-2}
 - Two-letter codes
 - Used to multilingual websites, aka Internationalization (`i18n`)
 - [i18n](https://en.wikipedia.org/wiki/Internationalization_and_localization) language codes
-{.marker-round}
 
 ### Multi-format of 639-1 codes
 
@@ -50,9 +49,8 @@ Getting Started {.cols-2}
 - [BBCode](https://tableconvert.com/html-to-bbcode?data=https://quickref.me/iso-639-1#TableGenerator)
 - [PDF](https://tableconvert.com/html-to-pdf?data=https://quickref.me/iso-639-1#TableGenerator)
 - [JPEG](https://tableconvert.com/html-to-jpeg?data=https://quickref.me/iso-639-1#TableGenerator)
-{.cols-4 .marker-none}
 
-List of ISO 639-1 codes {.cols-1}
+List of ISO 639-1 codes
 -----------
 
 ### Full codes
@@ -241,5 +239,3 @@ List of ISO 639-1 codes {.cols-1}
 | `za`       | Zhuang              | Saɯ cueŋƅ             |
 | `zh`       | Chinese             | 中文                    |
 | `zu`       | Zulu                | isiZulu               |
-
-{.show-header}
