@@ -1,5 +1,7 @@
 # Btm Process Widget Cheatsheet
 
+?	Access Help within btm
+e	Expand/Collapse current widget
 Up, k	Move up within a widget
 Down, j	Move down within a widget
 g+g, Home	Jump to the first entry in the table
