@@ -44,5 +44,48 @@ pub fn main() !void {
         print("Was null\n", .{});
     }
 
+    // Tagged Unions
+    // first define the tags
+    const ValueType = enum {
+        int,
+        float,
+        string,
+        unknown,
+    };
+
+    // not too different from simple union
+    const Value = union(ValueType) {
+        int: i32,
+        float: f64,
+        string: []const u8,
+        unknown: void,
+    };
+
+    // just like the simple union
+    var value = Value{ .float = 42.21 };
+
+    switch (value) {
+        .int => std.debug.print("value is int={d}\n", .{value.int}),
+        .float => std.debug.print("value is float={d}\n", .{value.float}),
+        .string => std.debug.print("value is string={s}\n", .{value.string}),
+        else => std.debug.print("value is unknown!\n", .{}),
+    }
+
+    // You can use the capture in the switch expression if you need to access the value.
+    switch (value) {
+        .int => |v| std.debug.print("value is int={d}\n", .{v}),
+        .float => |v| std.debug.print("value is float={d}\n", .{v}),
+        .string => |v| std.debug.print("value is string={s}\n", .{v}),
+        else => std.debug.print("value is unknown!\n", .{}),
+    }
+
+    // Convert the value to a pointer to modify it
+    switch (value) {
+        .int => |*v| v.* += 1,
+        .float => |*v| v.* ^= 2,
+        .string => |*v| v.* = "I'm not Ed",
+        else => std.debug.print("value is unknown!\n", .{}),
+    }
+
     // .... to be continued ....
 }
